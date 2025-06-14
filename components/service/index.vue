@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import CarouselService from "~/components/carousel/service.vue";
+
+defineComponent({
+  name: "ServiceIndex",
+  components: {
+    CarouselService,
+  },
+});
 </script>
 <template>
   <div class="container">

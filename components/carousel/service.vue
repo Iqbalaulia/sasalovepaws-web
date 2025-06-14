@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import "vue3-carousel/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
@@ -7,11 +7,18 @@ import petCareImages from "~/assets/template/images/services_image2.png";
 import veterinaryImages from "~/assets/template/images/services_image3.png";
 import petTrainingImages from "~/assets/template/images/services_image4.png";
 
+interface SlideState {
+  currentSlideIndex: number;
+  prevSlideIndex: number;
+  slidesCount: number;
+  slidingToIndex: number;
+}
+
 const carouselConfig = {
   itemsToShow: 4,
   wrapAround: true,
-  snapAlign: "left",
-  autoplay: "3000",
+  snapAlign: "center",
+  autoplay: 3000,
 };
 const services = [
   {
@@ -39,18 +46,34 @@ const services = [
     boxClass: "box4",
   },
 ];
-const currentSlide = ref(0);
+const currentSlide = ref<SlideState>({
+  currentSlideIndex: 0,
+  prevSlideIndex: 0,
+  slidesCount: 4,
+  slidingToIndex: 0,
+});
+
 const carouselRef = ref(null);
 
-function onSlideChange(index) {
-  currentSlide.value = index;
+function onSlideChange(index: number) {
+  currentSlide.value.currentSlideIndex = index;
 }
-function goToSlide(index) {
+function goToSlide(index: number) {
   if (carouselRef.value) {
-    currentSlide.value = index;
+    currentSlide.value.currentSlideIndex = index;
     carouselRef.value.slideTo(index);
   }
 }
+
+defineComponent({
+  name: "ServiceCarousel",
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+});
 </script>
 
 <template>
@@ -84,7 +107,7 @@ function goToSlide(index) {
           v-for="(item, index) in services"
           :key="index"
           @click="goToSlide(index)"
-          :class="{ active: currentSlide.currentSlideIndex === index }"
+          :class="{ active: currentSlide?.currentSlideIndex === index }"
         ></button>
       </div>
     </template>

@@ -12,6 +12,7 @@
   <section class="consultation_section">
     <BookSchedule />
   </section>
+  <section class="packages_section position-relative"></section>
 </template>
 
 <script setup lang="ts">
