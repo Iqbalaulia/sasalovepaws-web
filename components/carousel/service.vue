@@ -17,7 +17,6 @@ interface SlideState {
 const carouselConfig = {
   itemsToShow: 4,
   wrapAround: true,
-  snapAlign: "center",
   autoplay: 3000,
 };
 const services = [
@@ -79,7 +78,10 @@ defineComponent({
 <template>
   <Carousel
     ref="carouselRef"
-    v-bind="carouselConfig"
+    :items-to-show="carouselConfig.itemsToShow"
+    :wrap-around="carouselConfig.wrapAround"
+    :autoplay="carouselConfig.autoplay"
+    snap-align="center"
     @slide-start="onSlideChange"
   >
     <Slide v-for="(service, idx) in services" :key="idx">

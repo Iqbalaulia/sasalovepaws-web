@@ -6,6 +6,7 @@ import Services from "~/components/service/index.vue";
 import AboutUs from "~/components/about-us/index.vue";
 import BookSchedule from "~/components/book-schedule/index.vue";
 import Package from "~/components/package/index.vue";
+import Testimonials from "~/components/testimonials/index.vue";
 </script>
 
 <template>
@@ -19,10 +20,13 @@ import Package from "~/components/package/index.vue";
   <section class="about_section position-relative">
     <AboutUs />
   </section>
-  <section class="consultation_section">
+  <!-- <section class="consultation_section">
     <BookSchedule />
-  </section>
+  </section> -->
   <section class="packages_section position-relative">
     <Package />
+  </section>
+  <section class="testimonials_section position-relative">
+    <Testimonials />
   </section>
 </template>
