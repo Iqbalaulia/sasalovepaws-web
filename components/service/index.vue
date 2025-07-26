@@ -31,20 +31,12 @@ defineComponent({
       </figure>
     </div>
     <figure class="mb-0 services_left_shape position-absolute top_bottom_shape">
-      <img
-        src="assets/template/images/services_dog_shape.png"
-        alt=""
-        class="img-fluid"
-      />
+      <img src="assets/images/white_2.png" alt="" class="img-fluid" />
     </figure>
     <figure
       class="mb-0 services_right_shape position-absolute top_bottom_shape"
     >
-      <img
-        src="assets/template/images/services_cat_shape.png"
-        alt=""
-        class="img-fluid"
-      />
+      <img src="assets/images/orange_1.png" alt="" class="img-fluid" />
     </figure>
   </div>
 </template>

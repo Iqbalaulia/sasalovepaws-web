@@ -35,19 +35,13 @@
         </div>
         <div class="col-lg-7 col-md-12 col-sm-12 col-12">
           <div class="banner-section-image position-relative">
-            <figure class="banner-image mb-0 left_right_shape">
-              <img
-                src="assets/template/images/banner_image.png"
-                alt=""
-                class="img-fluid"
-              />
+            <figure class="banner-image mb-0 left_right_shape banner_custom">
+              <img src="assets/images/banner_1.png" alt="" class="img-fluid" />
             </figure>
-            <figure class="banner-background-image mb-0 position-absolute">
-              <img
-                src="assets/template/images/banner_image_background.png"
-                alt=""
-                class="img-fluid"
-              />
+            <figure
+              class="banner-background-image mb-0 position-absolute banner_brown_shape"
+            >
+              <img src="assets/images/bg_brown.png" alt="" class="img-fluid" />
             </figure>
             <figure
               class="banner-pink_foot_shape mb-0 position-absolute top_bottom_shape"
@@ -77,7 +71,7 @@
               </figure>
               <div class="box_content_wrapper">
                 <p class="box_heading text-size-16 mb-0">Vaccination</p>
-                <p class="content_line mb-0">Cats & Dog’s</p>
+                <p class="content_line mb-0">Cats</p>
               </div>
             </div>
             <div class="box pet_training_box position-absolute hover-effect">

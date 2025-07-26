@@ -6,7 +6,7 @@
           <a class="navbar-brand" href="index.html"
             ><figure class="mb-0">
               <img
-                src="assets/template/images/pawsh_logo.png"
+                src="assets/images/logo/sasa_logo_preview.png"
                 alt=""
                 class="img-fluid"
               /></figure
@@ -34,38 +34,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle dropdown-color navbar-text-color"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Pages
-                </a>
-                <div class="dropdown-menu drop-down-content">
-                  <ul class="list-unstyled drop-down-pages">
-                    <li class="nav-item">
-                      <a class="dropdown-item nav-link" href="cart.html"
-                        >Cart</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item nav-link" href="checkout.html"
-                        >Checkout</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item nav-link" href="shop.html"
-                        >Our Shop</a
-                      >
-                    </li>
-                  </ul>
-                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="packages.html">Packages</a>

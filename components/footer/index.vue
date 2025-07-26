@@ -2,7 +2,7 @@
 // Images
 import footerRightShadeImages from "~/assets/template/images/footer_right_shape.png";
 import footerHeadphoneImages from "~/assets/template/images/footer_headphone.png";
-import footerLogoImages from "~/assets/template/images/footer_logo.png";
+import footerLogoImages from "~/assets/images/logo/sasa_logo_preview_white.png";
 </script>
 <template>
   <div class="container">

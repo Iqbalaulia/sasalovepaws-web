@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import packageBoxImages from "~/assets/template/images/packages_box_left_shape.png";
-import packageBoxLeftShadeImages from "~/assets/template/images/packages_left_shape.png";
-import packageBoxRightShadeImages from "~/assets/template/images/packages_right_shape.png";
+import packageBoxLeftShadeImages from "~/assets/images/package_1.png";
+import packageBoxRightShadeImages from "~/assets/images/package_2.png";
 </script>
 <template>
   <div class="container">

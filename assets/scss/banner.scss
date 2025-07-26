@@ -1,0 +1,33 @@
+.banner-section-content {
+  text-align: left !important;
+}
+
+.banner-section-image {
+  .banner_custom {
+    img {
+      border-radius: 30% !important;
+    }
+  }
+  .banner_brown_shape {
+    img {
+      width: 500px;
+      height: 620px;
+      border-radius: 30%;
+    }
+  }
+
+  .banner-pink_foot_shape {
+    z-index: 1 !important;
+    left: -10px !important;
+  }
+
+  .banner-green_foot_shape {
+    z-index: 1 !important;
+    top: 100px !important;
+
+    img {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import statisticImages1 from "~/assets/template/images/statistics_image1.png";
 import statisticImages2 from "~/assets/template/images/statistics_image2.png";
 import statisticImages3 from "~/assets/template/images/statistics_image3.png";
 import statisticImages4 from "~/assets/template/images/statistics_image4.png";
-import newsletterImages from "~/assets/template/images/newsletter_image.png";
+import newsletterImages from "~/assets/images/newsletter_image.png";
 import newsletterYellowShape from "~/assets/template/images/newsletter_yellow_shape.png";
 import newsletterPurpleFoot from "~/assets/template/images/newsletter_purple_foot.png";
 import newsletterGreenFoot from "~/assets/template/images/newsletter_green_foot.png";
