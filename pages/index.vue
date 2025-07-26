@@ -7,6 +7,8 @@ import AboutUs from "~/components/about-us/index.vue";
 import BookSchedule from "~/components/book-schedule/index.vue";
 import Package from "~/components/package/index.vue";
 import Testimonials from "~/components/testimonials/index.vue";
+import Statistics from "~/components/statistic/index.vue";
+import Footer from "~/components/footer/index.vue";
 </script>
 
 <template>
@@ -28,5 +30,11 @@ import Testimonials from "~/components/testimonials/index.vue";
   </section>
   <section class="testimonials_section position-relative">
     <Testimonials />
+  </section>
+  <section class="stats_news_combo_section">
+    <Statistics />
+  </section>
+  <section class="footer-section">
+    <Footer />
   </section>
 </template>
