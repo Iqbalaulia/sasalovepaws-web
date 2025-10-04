@@ -36,13 +36,13 @@
                 <a class="nav-link" href="/services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="packages.html">Packages</a>
+                <a class="nav-link" href="/packages">Packages</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-link" href="/gallery">Gallery</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link default-btn contact_us" href="contact.html"
+                <a class="nav-link default-btn contact_us" href="/contact"
                   >Contact Us</a
                 >
               </li>
