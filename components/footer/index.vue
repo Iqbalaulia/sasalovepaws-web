@@ -2,7 +2,6 @@
 // Images
 import footerRightShadeImages from "~/assets/template/images/footer_right_shape.png";
 import footerHeadphoneImages from "~/assets/template/images/footer_headphone.png";
-import footerLogoImages from "~/assets/images/logo/sasa_logo_preview_white.png";
 </script>
 <template>
   <div class="container">
@@ -10,11 +9,6 @@ import footerLogoImages from "~/assets/images/logo/sasa_logo_preview_white.png";
       <div class="row">
         <div class="col-lg-5 col-md-5 col-sm-6 col-12">
           <div class="about_col">
-            <a href="index.html">
-              <figure>
-                <img :src="footerLogoImages" alt="" class="img-fluid" />
-              </figure>
-            </a>
             <p>
               Tristirue nulla aliquet enim tortor at auctor urna nunc massa enim
               nec dui nunc mattis enim ut tellus perspicia aute irure repreaen
