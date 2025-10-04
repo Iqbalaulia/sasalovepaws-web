@@ -46,15 +46,6 @@ import Footer from "~/components/footer/index.vue";
                 <p class="text-size-18 mb-0">Years of Experience</p>
               </div>
             </div>
-            <figure
-              class="mb-0 about_aboutus_shape position-absolute left_right_shape"
-            >
-              <img
-                src="assets/template/images/about_aboutus_shape.png"
-                alt=""
-                class="img-fluid"
-              />
-            </figure>
           </div>
         </div>
         <div class="col-lg-5 col-md-12 col-sm-12 col-12">

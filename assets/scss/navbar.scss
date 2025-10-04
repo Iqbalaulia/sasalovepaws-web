@@ -1,9 +1,13 @@
 .main_header {
+  padding: 0px 150px 0 268px !important;
   .navbar-brand {
     figure {
       .img-fluid {
         max-width: 60% !important;
       }
     }
+  }
+  .navbar-nav {
+    padding-left: 0px !important;
   }
 }
