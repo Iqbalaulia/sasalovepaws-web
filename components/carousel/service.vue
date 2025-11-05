@@ -95,9 +95,9 @@ defineComponent({
             {{ service.desc }}
           </p>
           <div class="btn_wrapper">
-            <a class="text-decoration-none" href="services.html">
+            <NuxtLink class="text-decoration-none" to="/services">
               Read more<i class="fa-solid fa-arrow-right"></i>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>

@@ -15,8 +15,8 @@
               neaus ameo consecaur.
             </p>
             <div class="btn_wrapper" data-aos="fade-up">
-              <a class="text-decoration-none default-btn" href="about.html"
-                >Read more</a
+              <NuxtLink class="text-decoration-none default-btn" to="/about"
+                >Read more</NuxtLink
               >
               <a class="play-icon mr-0" href="services.html#video_section"
                 ><i class="fa-solid fa-play"></i>Watch Video</a

@@ -58,8 +58,8 @@
             nisi ut aliuie commodo.
           </p>
           <div class="btn_wrapper">
-            <a class="text-decoration-none default-btn" href="about.html"
-              >Read more</a
+            <NuxtLink class="text-decoration-none default-btn" to="/about"
+              >Read more</NuxtLink
             >
           </div>
           <figure

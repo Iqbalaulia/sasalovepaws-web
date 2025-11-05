@@ -79,8 +79,8 @@ import Footer from "~/components/footer/index.vue";
               </li>
             </ul>
             <div class="btn_wrapper">
-              <a class="text-decoration-none default-btn" href="about.html"
-                >Read more</a
+              <NuxtLink class="text-decoration-none default-btn" to="/about"
+                >Read more</NuxtLink
               >
             </div>
           </div>
@@ -107,8 +107,8 @@ import Footer from "~/components/footer/index.vue";
               fugiat quo voluptas.
             </p>
             <div class="btn_wrapper">
-              <a class="text-decoration-none default-btn" href="services.html"
-                >Read more</a
+              <NuxtLink class="text-decoration-none default-btn" to="/services"
+                >Read more</NuxtLink
               >
             </div>
           </div>
