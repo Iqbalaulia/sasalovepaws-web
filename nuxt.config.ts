@@ -8,9 +8,25 @@ export default defineNuxtConfig({
     "@/assets/template/css/mediaqueries.css",
     "@/assets/template/css/owl.carousel.min.css",
     "@/assets/template/css/owl.theme.default.min.css",
+
     // scss files
     "@/assets/scss/style.scss",
+
+    "@/assets/admin/template/css/app.min.css",
+    "@/assets/admin/template/css/vendor.min.css",
+    "@/assets/admin/template/css/icons.min.css",
   ],
 
+  app: {
+    head: {
+      script: [
+        {
+          src: "/assets/admin/js/config.js",
+        },
+      ],
+    },
+  },
+
+  plugins: ["~/plugins/body-scripts.client.ts"],
   modules: ["vue3-carousel-nuxt"],
 });

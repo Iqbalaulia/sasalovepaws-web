@@ -3,9 +3,6 @@ import { computed } from "vue";
 
 const route = useRoute();
 
-const isActive = computed(() => (path: string) => {
-  return route.path === path;
-});
 const menuItems = computed(() => [
   {
     name: "Home",
