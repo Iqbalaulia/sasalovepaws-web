@@ -11,10 +11,6 @@ export default defineNuxtConfig({
 
     // scss files
     "@/assets/scss/style.scss",
-
-    "@/assets/admin/template/css/app.min.css",
-    "@/assets/admin/template/css/vendor.min.css",
-    "@/assets/admin/template/css/icons.min.css",
   ],
 
   app: {
