@@ -44,8 +44,8 @@ const menuItems = computed(() => [
         <nav class="navbar navbar-expand-lg navbar-light p-0">
           <NuxtLink to="/" class="navbar-brand">
             <figure class="mb-0">
-              <img
-                src="assets/images/logo/sasa_logo_preview.png"
+              <NuxtImg
+                src="/assets/images/logo/sasa_logo_preview.png"
                 alt=""
                 class="img-fluid"
               />

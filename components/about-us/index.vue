@@ -5,16 +5,20 @@
       <div class="col-lg-7 col-md-12 col-sm-12 col-12">
         <div class="about_images_wrapper position-relative">
           <figure class="mb-0 about_main_image">
-            <img
-              src="assets/template/images/about_main_image.jpg"
+            <NuxtImg
+              src="/assets/images/banner/banner_4.jpg"
               alt=""
+              width="550"
+              height="677"
               class="img-fluid"
             />
           </figure>
           <figure class="mb-0 about_left_image position-absolute">
-            <img
-              src="assets/template/images/about_left_image.jpg"
+            <NuxtImg
+              src="/assets/images/banner/banner_3.jpg"
               alt=""
+              width="370"
+              height="480"
               class="img-fluid"
             />
           </figure>

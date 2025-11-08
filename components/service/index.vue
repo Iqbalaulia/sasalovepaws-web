@@ -31,12 +31,22 @@ defineComponent({
       </figure>
     </div>
     <figure class="mb-0 services_left_shape position-absolute top_bottom_shape">
-      <img src="assets/images/white_2.png" alt="" class="img-fluid" />
+      <NuxtImg
+        src="/assets/images/banner/banner_5.png"
+        alt=""
+        width="380"
+        class="img-fluid"
+      />
     </figure>
     <figure
       class="mb-0 services_right_shape position-absolute top_bottom_shape"
     >
-      <img src="assets/images/orange_1.png" alt="" class="img-fluid" />
+      <NuxtImg
+        src="/assets/images/banner/banner_7.png"
+        alt=""
+        width="380"
+        class="img-fluid"
+      />
     </figure>
   </div>
 </template>

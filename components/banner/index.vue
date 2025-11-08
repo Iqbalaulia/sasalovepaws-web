@@ -36,13 +36,16 @@
         <div class="col-lg-7 col-md-12 col-sm-12 col-12">
           <div class="banner-section-image position-relative">
             <figure class="banner-image mb-0 left_right_shape banner_custom">
-              <img src="assets/images/banner_1.png" alt="" class="img-fluid" />
+              <NuxtImg
+                src="/assets/images/banner/banner_2.png"
+                alt=""
+                width="500"
+                class="img-fluid"
+              />
             </figure>
             <figure
               class="banner-background-image mb-0 position-absolute banner_brown_shape"
-            >
-              <img src="assets/images/bg_brown.png" alt="" class="img-fluid" />
-            </figure>
+            ></figure>
             <figure
               class="banner-pink_foot_shape mb-0 position-absolute top_bottom_shape"
             >

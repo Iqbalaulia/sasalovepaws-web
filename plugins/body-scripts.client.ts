@@ -10,7 +10,7 @@ export default defineNuxtPlugin(() => {
     };
 
     // Load vendor.js dan app.js di body
-    loadScript("/assets/admin/js/vendor.js", true);
-    loadScript("/assets/admin/js/app.js", true);
+    // loadScript("/assets/admin/js/vendor.js", true);
+    // loadScript("/assets/admin/js/app.js", true);
   }
 });

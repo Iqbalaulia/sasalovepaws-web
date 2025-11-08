@@ -5,3 +5,19 @@
     }
   }
 }
+
+.packages_section {
+  .packages_left_shape {
+    img {
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+    }
+  }
+
+  .packages_right_shape {
+    img {
+      border-bottom-left-radius: 10%;
+      border-bottom-right-radius: 10%;
+    }
+  }
+}

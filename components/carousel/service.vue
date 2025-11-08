@@ -15,7 +15,7 @@ interface SlideState {
 }
 
 const carouselConfig = {
-  itemsToShow: 4,
+  itemsToShow: 3,
   wrapAround: true,
   autoplay: 3000,
 };

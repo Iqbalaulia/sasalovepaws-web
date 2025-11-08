@@ -16,13 +16,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
-        {
-          src: "/assets/admin/js/config.js",
-        },
+        // {
+        //   src: "/assets/admin/js/config.js",
+        // },
       ],
     },
   },
 
   plugins: ["~/plugins/body-scripts.client.ts"],
-  modules: ["vue3-carousel-nuxt"],
+  modules: ["vue3-carousel-nuxt", "@nuxt/image"],
 });

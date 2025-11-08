@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import packageBoxImages from "~/assets/template/images/packages_box_left_shape.png";
-import packageBoxLeftShadeImages from "~/assets/images/package_1.png";
-import packageBoxRightShadeImages from "~/assets/images/package_2.png";
+import packageBoxLeftShadeImages from "/assets/images/banner/banner_8.png";
+import packageBoxRightShadeImages from "/assets/images/banner/banner_9.png";
 </script>
 <template>
   <div class="container">
@@ -144,10 +144,20 @@ import packageBoxRightShadeImages from "~/assets/images/package_2.png";
       </figure>
     </div>
     <figure class="mb-0 packages_left_shape position-absolute top_bottom_shape">
-      <img :src="packageBoxLeftShadeImages" alt="" class="img-fluid" />
+      <NuxtImg
+        :src="packageBoxLeftShadeImages"
+        width="400"
+        alt=""
+        class="img-fluid"
+      />
     </figure>
     <figure class="mb-0 packages_right_shape position-absolute">
-      <img :src="packageBoxRightShadeImages" alt="" class="img-fluid" />
+      <NuxtImg
+        :src="packageBoxRightShadeImages"
+        width="400"
+        alt=""
+        class="img-fluid"
+      />
     </figure>
   </div>
 </template>

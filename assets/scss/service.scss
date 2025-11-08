@@ -1,10 +1,21 @@
 .services_section {
   .services_left_shape {
     top: 150px;
+    left: 30px !important;
+
+    img {
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+    }
   }
 
   .services_right_shape {
     top: 200px;
-    right: -15px;
+    right: 30px;
+
+    img {
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+    }
   }
 }
