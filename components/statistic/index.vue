@@ -4,7 +4,7 @@ import statisticImages1 from "~/assets/template/images/statistics_image1.png";
 import statisticImages2 from "~/assets/template/images/statistics_image2.png";
 import statisticImages3 from "~/assets/template/images/statistics_image3.png";
 import statisticImages4 from "~/assets/template/images/statistics_image4.png";
-import newsletterImages from "~/assets/images/newsletter_image.png";
+import newsletterImages from "/assets/images/banner/banner_10.png";
 import newsletterYellowShape from "~/assets/template/images/newsletter_yellow_shape.png";
 import newsletterPurpleFoot from "~/assets/template/images/newsletter_purple_foot.png";
 import newsletterGreenFoot from "~/assets/template/images/newsletter_green_foot.png";
@@ -89,7 +89,12 @@ import newsletterGreenFoot from "~/assets/template/images/newsletter_green_foot.
         <div class="row">
           <div class="col-lg-5 col-md-5 col-sm-12 col-12 order-md-1 order-2">
             <figure class="newsletter_image mb-0 position-absolute">
-              <img :src="newsletterImages" alt="" class="img-fluid" />
+              <NuxtImg
+                width="500"
+                :src="newsletterImages"
+                alt=""
+                class="img-fluid"
+              />
             </figure>
           </div>
           <div class="col-lg-7 col-md-7 col-sm-12 col-12 order-md-2 order-1">

@@ -97,10 +97,8 @@ import footerHeadphoneImages from "~/assets/template/images/footer_headphone.png
                 <p>Email:</p>
               </li>
               <li class="mail">
-                <a
-                  href="mailto:info@pawshpetcare.com"
-                  class="text-decoration-none"
-                  >info@pawshpetcare.com</a
+                <a href="mailto:info@baleteams.com" class="text-decoration-none"
+                  >info@baleteams.com</a
                 >
               </li>
             </ul>
@@ -138,7 +136,7 @@ import footerHeadphoneImages from "~/assets/template/images/footer_headphone.png
   <div class="bottom-portion">
     <div class="col-12">
       <div class="copyright">
-        <p>Copyright © 2023 pawshpetcare All rights reserved.</p>
+        <p>Copyright © 2023 baleteam's All rights reserved.</p>
       </div>
     </div>
   </div>
