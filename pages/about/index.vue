@@ -17,16 +17,18 @@ import Footer from "~/components/footer/index.vue";
         <div class="col-lg-7 col-md-12 col-sm-12 col-12">
           <div class="about_images_wrapper position-relative">
             <figure class="mb-0 about_main_image">
-              <img
-                src="assets/template/images/about_aboutus_main_image.jpg"
+              <NuxtImg
+                src="/assets/images/banner/banner_12.jpg"
                 alt=""
+                width="440"
                 class="img-fluid"
               />
             </figure>
             <figure class="mb-0 about_left_image position-absolute">
-              <img
-                src="assets/template/images/about_aboutus_image2.jpg"
+              <NuxtImg
+                src="/assets/images/banner/banner_11.jpg"
                 alt=""
+                width="340"
                 class="img-fluid"
               />
             </figure>

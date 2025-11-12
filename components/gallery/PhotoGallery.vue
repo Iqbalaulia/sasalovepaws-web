@@ -1,6 +1,14 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const activeTab = ref("all");
+
+const setActiveTab = (tab: string) => {
+  activeTab.value = tab;
+};
+</script>
 <template>
-  <section class="gallery_section position-relative">
+  <section class="position-relative">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -12,26 +20,62 @@
       </div>
       <div class="tabs-box tabs-options">
         <ul class="nav nav-tabs">
-          <li><a class="active" data-toggle="tab" href="#all">All</a></li>
           <li>
-            <a data-toggle="tab" href="#walking_sitting" class="walking"
+            <a
+              href="javascript:void(0)"
+              :class="{ active: activeTab === 'all' }"
+              data-toggle="tab"
+              @click="setActiveTab('all')"
+              >All</a
+            >
+          </li>
+          <li>
+            <a
+              data-toggle="tab"
+              href="javascript:void(0)"
+              class="walking"
+              :class="{ active: activeTab === 'walking' }"
+              @click="setActiveTab('walking')"
               >Walking & Sitting</a
             >
           </li>
           <li>
-            <a data-toggle="tab" href="#grooming" class="grooming">Grooming</a>
+            <a
+              data-toggle="tab"
+              href="javascript:void(0)"
+              class="grooming"
+              :class="{ active: activeTab === 'grooming' }"
+              @click="setActiveTab('grooming')"
+              >Grooming</a
+            >
           </li>
           <li>
-            <a data-toggle="tab" href="#training" class="training">Training</a>
+            <a
+              data-toggle="tab"
+              href="javascript:void(0)"
+              class="training"
+              :class="{ active: activeTab === 'training' }"
+              @click="setActiveTab('training')"
+              >Training</a
+            >
           </li>
           <li>
-            <a data-toggle="tab" href="#health_wellness" class="health"
+            <a
+              data-toggle="tab"
+              href="javascript:void(0)"
+              class="health"
+              :class="{ active: activeTab === 'health' }"
+              @click="setActiveTab('health')"
               >Health & Wellness</a
             >
           </li>
         </ul>
         <div class="tab-content" data-aos="fade-up">
-          <div id="all" class="tab-pane fade in active show">
+          <div
+            id="all"
+            v-if="activeTab === 'all'"
+            class="tab-pane fade in active show"
+          >
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
@@ -154,7 +198,7 @@
               </div>
             </div>
           </div>
-          <div id="walking_sitting" class="tab-pane fade">
+          <div id="walking_sitting" v-if="activeTab === 'walking'">
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
@@ -221,7 +265,7 @@
               </figure>
             </div>
           </div>
-          <div id="grooming" class="tab-pane fade">
+          <div id="grooming" v-if="activeTab === 'grooming'">
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
@@ -288,7 +332,7 @@
               </figure>
             </div>
           </div>
-          <div id="training" class="tab-pane fade">
+          <div id="training" v-if="activeTab === 'training'">
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
@@ -355,7 +399,7 @@
               </figure>
             </div>
           </div>
-          <div id="health_wellness" class="tab-pane fade">
+          <div id="health_wellness" v-if="activeTab === 'health'">
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">

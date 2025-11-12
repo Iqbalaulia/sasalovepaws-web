@@ -100,3 +100,13 @@ const menuItems = computed(() => [
     </div>
   </header>
 </template>
+<style scoped lang="scss">
+.outer_div {
+  position: relative;
+  display: inline-block;
+
+  img {
+    filter: grayscale(50%) sepia(30%) hue-rotate(200deg);
+  }
+}
+</style>

@@ -28,12 +28,12 @@ body {
 
 :root {
   --e-global-color-primary: #180a32;
-  --e-global-color-secondary: #fbab2a;
+  --e-global-color-secondary: #9ecfd4;
   --e-global-color-text: #544e5f;
-  --e-global-color-accent: #fbab2a;
+  --e-global-color-accent: #016b61;
   --e-global-color-white: #ffffff;
-  --e-global-color-very-soft-violet: #bb98fd;
-  --e-global-color-soft-violet: #ba97fc;
+  --e-global-color-very-soft-violet: #70b2b2;
+  --e-global-color-soft-violet: #70b2b2;
   --e-global-color-lime-green: #8ce1c9;
   --e-global-color-soft-red: #f9a49d;
   --e-global-color-bright-orange: #f6a939;
@@ -41,13 +41,14 @@ body {
   --e-global-color-pale-red: #fff7f6;
   --e-global-color-pale-violet: #faf7ff;
   --e-global-color-pale-orange: #fffbf4;
-  --e-global-color-dark-grayish-violet: #7e7986;
-  --e-global-color-grayish-violet: #b0a7c0;
+  --e-global-color-dark-grayish-violet: #016b61;
+  --e-global-color-grayish-violet: #9ecfd4;
   --e-global-color-desaturated-violet: #3a2f51;
   --e-global-color-mostly-white-violet: #faf8ff;
   --e-global-color-grayish-cyan: #f2fafb;
   --e-global-color-light-grayish-cyan: #eff4f2;
   --e-global-color-light-grayish-red: #f7ebed;
+  --e-global-color-background-primary: #016b61;
 }
 
 h1 {
@@ -1531,7 +1532,7 @@ html {
 /* Home Page Statistics Newsletter Combo Section Style */
 
 .stats_news_combo_section {
-  padding: 140px 0 0;
+  padding: 10px 0 0;
 }
 
 /* Home Page Statistics Section Style */
@@ -1756,7 +1757,7 @@ html {
 
 .footer-section {
   position: relative;
-  background-color: var(--e-global-color-primary);
+  background-color: var(--e-global-color-background-primary);
   padding: 295px 0 0;
   margin-top: -195px;
 }
@@ -1913,9 +1914,9 @@ html {
   color: var(--e-global-color-accent);
 }
 .bottom-portion {
-  border-top: 1px solid var(--e-global-color-desaturated-violet);
+  border-top: 1px solid var(--e-global-color-background-primary);
   text-align: center;
-  background-color: var(--e-global-color-primary);
+  background-color: var(--e-global-color-background-primary);
 }
 .copyright {
   padding: 15px 0;
@@ -2252,6 +2253,7 @@ html {
   border-bottom: 0px solid var(--e-global-color-white);
   padding: 0px 95px 0 202px;
   margin-bottom: 55px;
+  justify-content: center;
 }
 .gallery_section .nav-tabs li {
   margin-right: 2px;
@@ -2350,6 +2352,7 @@ html {
 .gallery_section .gallery_image figure img {
   border-radius: 20px;
   box-shadow: 0px 7px 67px 4px rgba(0, 0, 0, 0.03);
+  width: 100%;
 }
 .gallery_image:hover .overlay {
   bottom: 0;
@@ -2701,7 +2704,6 @@ html {
 /* Packages Page Our Packages Section Style */
 
 .our_packages_section {
-  padding: 135px 0 115px;
   position: relative;
 }
 .our_packages_section .our_packages_content {
@@ -3020,7 +3022,7 @@ html {
   }
 }
 .aboutus_section .about_images_wrapper .about_left_image {
-  right: 12px;
+  right: 100px;
   bottom: 15px;
 }
 .aboutus_section .about_images_wrapper .about_left_image img {

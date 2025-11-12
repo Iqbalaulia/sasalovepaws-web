@@ -55,27 +55,13 @@
             data-aos="fade-up"
           >
             <figure class="mission_center_image mb-0">
-              <img
-                src="assets/images/our-mission/mission_center_image.jpg"
+              <NuxtImg
+                src="/assets/images/banner/banner_13.jpg"
                 alt=""
+                width="500"
                 class="img-fluid"
               />
             </figure>
-            <div class="mission_video_icon">
-              <a
-                class="popup-vimeo"
-                href="https://previews.customer.envatousercontent.com/852b951f-6d7a-4672-8f40-4f777205c293/watermarked_preview/watermarked_preview.mp4"
-              >
-                <figure class="video_img mb-0">
-                  <img
-                    class="thumb img-fluid"
-                    style="cursor: pointer"
-                    src="assets/images/our-mission/mission_video_icon.png"
-                    alt=""
-                  />
-                </figure>
-              </a>
-            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-12">

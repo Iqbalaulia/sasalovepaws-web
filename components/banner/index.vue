@@ -144,3 +144,9 @@
     </div>
   </section>
 </template>
+
+<style scoped lang="scss">
+.banner-section-content {
+  text-align: left !important;
+}
+</style>
