@@ -74,7 +74,8 @@ const setActiveTab = (tab: string) => {
           <div
             id="all"
             v-if="activeTab === 'all'"
-            class="tab-pane fade in active show"
+            class="in active show"
+            data-aos="fade-right"
           >
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
@@ -198,7 +199,11 @@ const setActiveTab = (tab: string) => {
               </div>
             </div>
           </div>
-          <div id="walking_sitting" v-if="activeTab === 'walking'">
+          <div
+            id="walking_sitting"
+            v-if="activeTab === 'walking'"
+            data-aos="fade-right"
+          >
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
@@ -265,7 +270,11 @@ const setActiveTab = (tab: string) => {
               </figure>
             </div>
           </div>
-          <div id="grooming" v-if="activeTab === 'grooming'">
+          <div
+            id="grooming"
+            v-if="activeTab === 'grooming'"
+            data-aos="fade-right"
+          >
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
@@ -332,7 +341,11 @@ const setActiveTab = (tab: string) => {
               </figure>
             </div>
           </div>
-          <div id="training" v-if="activeTab === 'training'">
+          <div
+            id="training"
+            v-if="activeTab === 'training'"
+            data-aos="fade-right"
+          >
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
@@ -399,7 +412,11 @@ const setActiveTab = (tab: string) => {
               </figure>
             </div>
           </div>
-          <div id="health_wellness" v-if="activeTab === 'health'">
+          <div
+            id="health_wellness"
+            v-if="activeTab === 'health'"
+            data-aos="fade-right"
+          >
             <div class="row position-relative">
               <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="gallery_image">
