@@ -40,6 +40,12 @@ const menuItems = computed(() => [
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
+  // Lock/unlock body scroll when menu opens/closes
+  if (isMenuOpen.value) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
 };
 
 // Close menu when route changes
@@ -47,13 +53,19 @@ watch(
   () => route.path,
   () => {
     isMenuOpen.value = false;
+    document.body.style.overflow = "";
   }
 );
+
+// Clean up on unmount
+onUnmounted(() => {
+  document.body.style.overflow = "";
+});
 </script>
 
 <template>
-  <header>
-    <div class="main_header">
+  <header class="header_menu">
+    <div class="main_header" :class="{ 'menu-open': isMenuOpen }">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
           <NuxtLink to="/" class="navbar-brand">
@@ -97,13 +109,13 @@ watch(
                       active: item.isActive,
                     },
                   ]"
-                  @click="isMenuOpen = false"
+                  @click="toggleMenu"
                 >
                   {{ item.name }}
                 </NuxtLink>
               </li>
             </ul>
-            <div class="outer_div">
+            <div class="outer_div d-none d-sm-block">
               <figure class="mb-0">
                 <img
                   src="assets/template/images/navbar_call_image.png"
@@ -132,6 +144,49 @@ watch(
     opacity: 1;
   }
 }
+
+.header_menu {
+  @media (max-width: 991px) {
+    margin-bottom: 100px;
+  }
+}
+
+.main_header {
+  transition: all 0.3s ease;
+
+  // Sticky header on mobile
+  @media (max-width: 991px) {
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    &.menu-open {
+      position: fixed;
+      width: 100%;
+    }
+  }
+}
+
+.navbar {
+  @media (max-width: 991px) {
+    position: relative;
+    padding: 15px 0 !important;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar-brand {
+  z-index: 1002;
+
+  @media (max-width: 991px) {
+    position: relative;
+  }
+}
+
 .outer_div {
   position: relative;
   display: inline-block;
@@ -152,9 +207,11 @@ watch(
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001;
-  position: inherit;
-  right: -60px !important;
+  z-index: 1002;
+  position: fixed;
+  right: 40px;
+  transform: translateY(-50%);
+  top: 35px;
 
   span {
     display: block;
@@ -167,6 +224,15 @@ watch(
   }
 
   &.active {
+    position: fixed;
+    right: 40px;
+    top: 35px;
+    transform: translateY(-50%);
+
+    span {
+      background-color: #333;
+    }
+
     span:nth-child(1) {
       transform: rotate(45deg) translate(6px, 6px);
     }
@@ -183,11 +249,15 @@ watch(
 
 // Desktop styles
 @media (min-width: 992px) {
-  .navbar-menu {
+  .navbar-menu,
+  .navbar-collapse {
     display: flex !important;
     align-items: center;
-    justify-content: space-between;
     flex: 1;
+  }
+
+  .hamburger-menu {
+    display: none !important;
   }
 }
 
@@ -202,14 +272,17 @@ watch(
       position: fixed;
       top: 70px;
       left: 0;
+      right: 0;
       width: 100%;
-      height: calc(100vh - 70px);
+      height: auto; // Height otomatis sesuai konten
+      max-height: calc(100vh - 70px); // Max height agar tidak melebihi viewport
       background: white;
       transition: all 0.3s ease;
       z-index: 1000;
-      overflow-y: auto;
+      overflow-y: auto; // Scroll jika konten terlalu panjang
       padding: 20px;
       display: block !important;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
       @include fade-in();
     }
 
@@ -220,10 +293,37 @@ watch(
 
   .navbar-nav {
     flex-direction: column;
+    padding: 0;
 
     .nav-item {
       margin: 0.5rem 0;
+
+      .nav-link {
+        padding: 12px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        display: block;
+      }
     }
   }
+
+  .outer_div {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+  }
+}
+
+// Overlay backdrop
+.navbar-menu.show::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  @include fade-in(0.3s);
 }
 </style>
