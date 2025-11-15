@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-import { computed } from "vue";
+import { ref } from "vue";
 
 const route = useRoute();
+const isMenuOpen = ref(false);
 
 const menuItems = computed(() => [
   {
@@ -36,7 +37,20 @@ const menuItems = computed(() => [
     isButton: true,
   },
 ]);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+// Close menu when route changes
+watch(
+  () => route.path,
+  () => {
+    isMenuOpen.value = false;
+  }
+);
 </script>
+
 <template>
   <header>
     <div class="main_header">
@@ -46,25 +60,28 @@ const menuItems = computed(() => [
             <figure class="mb-0">
               <NuxtImg
                 src="/assets/images/logo/sasa_logo_preview.png"
-                alt=""
+                alt="Logo"
                 class="img-fluid"
               />
             </figure>
           </NuxtLink>
           <button
-            class="navbar-toggler collapsed"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            class="hamburger-menu d-lg-none"
+            :class="{ active: isMenuOpen }"
+            @click="toggleMenu"
+            aria-label="Toggle menu"
           >
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            :class="[
+              isMenuOpen ? 'show navbar-menu' : 'collapse navbar-collapse',
+              { active: isMenuOpen },
+            ]"
+            id="navbarSupportedContent"
+          >
             <ul class="navbar-nav">
               <li
                 v-for="item in menuItems"
@@ -80,6 +97,7 @@ const menuItems = computed(() => [
                       active: item.isActive,
                     },
                   ]"
+                  @click="isMenuOpen = false"
                 >
                   {{ item.name }}
                 </NuxtLink>
@@ -100,13 +118,112 @@ const menuItems = computed(() => [
     </div>
   </header>
 </template>
+
 <style scoped lang="scss">
+@mixin fade-in($duration: 0.5s, $timing: ease-in) {
+  animation: fadeIn $duration $timing;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .outer_div {
   position: relative;
   display: inline-block;
 
   img {
     filter: grayscale(50%) sepia(30%) hue-rotate(200deg);
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  position: inherit;
+  right: -60px !important;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(6.5px, -7px);
+    }
+  }
+}
+
+// Desktop styles
+@media (min-width: 992px) {
+  .navbar-menu {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+}
+
+// Mobile styles
+@media (max-width: 991px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navbar-menu {
+    &.show {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background: white;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 20px;
+      display: block !important;
+      @include fade-in();
+    }
+
+    &.collapse {
+      display: none;
+    }
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+
+    .nav-item {
+      margin: 0.5rem 0;
+    }
   }
 }
 </style>

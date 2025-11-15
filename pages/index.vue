@@ -1,17 +1,4 @@
-<script setup lang="ts">
-import {
-  Map,
-  Footer,
-  Statistic,
-  Testimonials,
-  Package,
-  BookSchedule,
-  AboutUs,
-  Service,
-  Banner,
-  Navbar,
-} from "#components";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="banner-section-outer">

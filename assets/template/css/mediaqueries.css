@@ -1444,6 +1444,7 @@
   .navbar-nav .active > a {
     background-color: var(--e-global-color-accent);
     color: var(--e-global-color-white) !important;
+    border-radius: 10px;
   }
   .navbar-nav .active > a:hover {
     background-color: var(--e-global-color-accent);

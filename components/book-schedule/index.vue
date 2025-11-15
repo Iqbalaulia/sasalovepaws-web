@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <div class="container">
-    <div class="row position-relative" data-aos="fade-up">
+    <div class="row position-relative form-schedule" data-aos="fade-up">
       <div class="col-lg-7 col-md-12 col-sm-12 col-12">
         <div class="consultation_content">
           <h6>Book a consultation</h6>
@@ -94,8 +94,8 @@
     <figure
       class="consultation_left_shape mb-0 position-absolute top_bottom_shape"
     >
-      <img
-        src="assets/template/images/consultation_left_shape.png"
+      <NuxtImg
+        src="/assets/images/packages/packages_1.png"
         alt=""
         class="img-fluid"
       />

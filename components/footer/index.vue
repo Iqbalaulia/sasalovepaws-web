@@ -1,6 +1,5 @@
 <script setup lang="ts">
 // Images
-import footerRightShadeImages from "~/assets/template/images/footer_right_shape.png";
 import footerHeadphoneImages from "~/assets/template/images/footer_headphone.png";
 </script>
 <template>
@@ -140,7 +139,4 @@ import footerHeadphoneImages from "~/assets/template/images/footer_headphone.png
       </div>
     </div>
   </div>
-  <figure class="mb-0 footer_right_shape position-absolute top_bottom_shape">
-    <img :src="footerRightShadeImages" alt="" class="img-fluid" />
-  </figure>
 </template>
