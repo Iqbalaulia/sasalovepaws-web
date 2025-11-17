@@ -3,23 +3,34 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   css: [
     "bootstrap/dist/css/bootstrap.min.css",
-    // css files
     "@/assets/template/css/style.css",
     "@/assets/template/css/mediaqueries.css",
     "@/assets/template/css/owl.carousel.min.css",
     "@/assets/template/css/owl.theme.default.min.css",
-
-    // scss files
     "@/assets/scss/style.scss",
   ],
 
-  app: {
-    head: {
-      script: [
-        // {
-        //   src: "/assets/admin/js/config.js",
-        // },
-      ],
+  vite: {
+    css: {
+      postcss: {
+        plugins: [],
+      },
+    },
+    build: {
+      cssCodeSplit: false,
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            if (id.includes("style.css")) {
+              return "vendor-css";
+            }
+            if (id.includes(".scss")) {
+              return "app-scss";
+            }
+          },
+          preserveModules: false,
+        },
+      },
     },
   },
 
