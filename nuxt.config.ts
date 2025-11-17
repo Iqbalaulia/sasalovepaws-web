@@ -33,7 +33,7 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  //
   plugins: ["~/plugins/body-scripts.client.ts", "~/plugins/aos.client.ts"],
   modules: ["vue3-carousel-nuxt", "@nuxt/image"],
 });
