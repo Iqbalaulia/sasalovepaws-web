@@ -1,6 +1,16 @@
+/* SCSS Modules - @use must come first */
 @use "./book-schedule.scss";
 @use "./statistic.scss";
 @use "./banner.scss";
 @use "./service.scss";
 @use "./package.scss";
 @use "./navbar.scss";
+
+/* 1. Bootstrap */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* 2. Template CSS */
+@import "@/assets/template/css/style.css";
+@import "@/assets/template/css/mediaqueries.css";
+@import "@/assets/template/css/owl.carousel.min.css";
+@import "@/assets/template/css/owl.theme.default.min.css";

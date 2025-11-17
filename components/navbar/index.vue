@@ -131,7 +131,7 @@ onUnmounted(() => {
   </header>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @mixin fade-in($duration: 0.5s, $timing: ease-in) {
   animation: fadeIn $duration $timing;
 }

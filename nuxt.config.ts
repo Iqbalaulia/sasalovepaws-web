@@ -1,14 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: false },
-  css: [
-    "bootstrap/dist/css/bootstrap.min.css",
-    "@/assets/template/css/style.css",
-    "@/assets/template/css/mediaqueries.css",
-    "@/assets/template/css/owl.carousel.min.css",
-    "@/assets/template/css/owl.theme.default.min.css",
-    "@/assets/scss/style.scss",
-  ],
+  css: ["@/assets/scss/style.scss"],
 
   vite: {
     css: {
@@ -20,14 +13,6 @@ export default defineNuxtConfig({
       cssCodeSplit: false,
       rollupOptions: {
         output: {
-          manualChunks: (id) => {
-            if (id.includes("style.css")) {
-              return "vendor-css";
-            }
-            if (id.includes(".scss")) {
-              return "app-scss";
-            }
-          },
           preserveModules: false,
         },
       },
