@@ -7,7 +7,7 @@
         >
           <div class="banner-section-content">
             <h1 data-aos="fade-up">
-              We’re Here to Care <span></span> of Your Pet’s
+              Your Cat's Health & Happiness is Our Priority
             </h1>
             <p data-aos="fade-right">
               Consequat nisl vel pretium lectus ruam iea leo in viverra cras

@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
 [Master Stylesheet]
 
-Project:  Pawsh Pet Care
+Project:  Sasalovepaws Pet Care
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [Table of contents]
@@ -251,6 +251,8 @@ html {
   margin-bottom: 12px;
   padding-right: 80px;
   color: var(--e-global-color-primary);
+  font-size: 60px;
+  line-height: 1;
 }
 .banner-section-outer .banner-section .banner-section-content h1 span {
   background: var(--e-global-color-white);
