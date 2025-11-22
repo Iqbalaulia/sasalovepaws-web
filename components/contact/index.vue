@@ -75,16 +75,16 @@
                 <h3>Email Us:</h3>
                 <p class="mb-0">
                   <a
-                    href="mailto:Info@pawshpetcare.com"
+                    href="mailto:Info@Sasalovepaws.com"
                     class="text-decoration-none"
-                    >Info@pawshpetcare.com</a
+                    >Info@Sasalovepaws.com</a
                   >
                 </p>
                 <p class="mb-0">
                   <a
-                    href="mailto:pawshpetcare@gmail.com"
+                    href="mailto:Sasalovepaws@gmail.com"
                     class="text-decoration-none"
-                    >pawshpetcare@gmail.com</a
+                    >Sasalovepaws@gmail.com</a
                   >
                 </p>
               </div>
@@ -100,11 +100,7 @@
             Officiis debitis aut rerum necessitatibus saepe eveniet voluta
             ratione voluptatem serui nesciunt.
           </p>
-          <form
-            id="contactpage"
-            method="POST"
-            action="https://html.designingmedia.com/pawsh/contact-form.php"
-          >
+          <form id="contactpage" method="POST">
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="form-group mb-0">
